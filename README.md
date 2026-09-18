@@ -26,13 +26,26 @@ Work through the files in order. Start with the assignment to understand the goa
 | [**02 - Workflow**](02_workflow.md)                          | A recommended EDA workflow, from understanding and questioning the data through cleaning, relationships, and presenting. |
 | [**03 - Fetching the Data**](03_fetching_the_data_eda.ipynb) | Connect to the PostgreSQL database with psycopg2 and SQLAlchemy, then pull the data into a pandas DataFrame.             |
 | [**04 - EDA**](04_eda.ipynb)                                 | Starter notebook for your exploratory data analysis.                                                                     |
+| [**05 - EDA King County**](05_EDA_King_County.ipynb)         | Worked case study: data cleaning, three client hypotheses, and a GIS-based hidden-waterfront analysis. See below.        |
 | [**Column Names**](column_names.md)                          | Data dictionary describing each column in the King County housing dataset.                                               |
+
+## Case Study: Waterfront House Search for Jennifer Montgomery
+
+[**05 - EDA King County**](05_EDA_King_County.ipynb) takes the template all the way into a real client engagement. The client, **Jennifer Montgomery** of Montgomery Realty Group, is after a waterfront home — high budget, tight one-month timeline, wants a place that shows off a bit. The notebook builds a full pipeline around that brief:
+
+- **Data cleaning** — fixes a systematic `yr_renovated` scaling bug, fills the legitimately-empty gaps (no basement, never renovated, etc.), and confirms the 177 duplicate listings are real resales, not data errors.
+- **Three hypotheses** — tests whether waterfront homes are pricier, older, and closer to cities. The price hypothesis holds up (and then some); the age and location hypotheses turn out more nuanced than the initial assumption.
+- **Hidden waterfront** — joins every house against King County's real water-body GIS data ([`WTRBDY_DET_AREA_.geojson`](projectdata/WTRBDY_DET_AREA_.geojson)) to find 125 homes within 25m of water that were never flagged as waterfront in the listing data, nearly doubling the known waterfront inventory.
+- **Show-off-factor tool** — an interactive, weighted scoring widget that turns those findings into a live, adjustable shortlist of candidate homes for the client.
+
+The findings were also packaged into a standalone interactive HTML presentation (slide deck with the show-off tool and a real King County map built in) for presenting to the client.
 
 ### Additional Folders and Files
 
 | File / Folder                           | Description                                                                                    |
 | --------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | [**Data**](data/)                    | Where you save the dataset CSV. The folder is tracked, but its data files are kept out of git. |
+| [**projectdata/**](projectdata/)     | Case-study materials for 05 - EDA King County: the joined CSV, the King County water-body GeoJSON, and project notes.  |
 | [**.env.example**](.env.example)     | Template for the database credentials. Copy it to `.env` and fill in your values.            |
 | [**pyproject.toml**](pyproject.toml) | Project configuration and dependencies.                                                        |
 | [**uv.lock**](uv.lock)               | Dependency lock file.                                                                          |
