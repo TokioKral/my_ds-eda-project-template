@@ -1,0 +1,33 @@
+Meta:
+
+Daten importieren
+Daten bereinigen & Kennzahlen für Datenmüll
+Klientenbeschreibung
+EDA
+Visualisierung / Chart-Auswahl
+Storytelling / Interpretation
+Review & Feedback
+
+Macro – Punkt 2 (Bereinigung):
+
+Duplikate erkennen (%)
+NaN/Null-Werte erkennen (%)
+Anpassung wegen NaN/Null-Handling
+Ausreißer (Outlier) identifizieren
+Datentypen prüfen/korrigieren
+Plausibilitätsprüfung
+Konsistenz doppelter Spalten (zwei id-Spalten aus Join)
+Einheiten/Wertebereiche checken
+Dokumentation der Bereinigungsschritte
+
+Macro – Punkt 3 (Klientenbeschreibung):
+
+Anforderung des Klienten
+Zielgruppe & Kontext der Präsentation
+3 Hypothesen, die es zu prüfen gilt
+Relevante Variablen je Hypothese
+Mögliche Visualisierungstypen (Standard-Set)
+
+Macro – Punkt 4 (EDA): offen, wartet auf Progress aus 2 & 3
+
+Erfolgskriterium (aus 3 ausgelagert) → gehört zu Punkt 6 (Storytelling)
