@@ -1,0 +1,10 @@
+Bereinigungsreihenfolge für df_opti:
+
+df_raw = unplausible/irrelevante Spalten droppen
+Duplikate identifizieren (und ggf. entfernen, falls echte Dopplungen)
+Spalten umbenennen (falls nötig, z. B. konsistente Namenskonventionen)
+Unique-Werte je Spalte identifizieren und unplausible Werte ersetzen (z. B. yr_renovated)
+NaN-Werte je Spalte finden und ausgeben (print)
+0-Werte auf Plausibilität prüfen und – falls vorhanden – über Duplikate ersetzen
+
+Ergebnis: df_opti
